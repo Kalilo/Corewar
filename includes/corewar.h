@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/21 09:45:12 by khansman          #+#    #+#             */
-/*   Updated: 2016/08/26 08:04:20 by arnovan-         ###   ########.fr       */
+/*   Updated: 2016/08/26 10:38:28 by arnovan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@
 # define ERR_MSG_06 "\e[31mError: Max players already reached.\n"
 # define ERR_MSG_07 "\e[31mError: Unable to open champion file.\n"
 # define ERR_MSG_08 "\e[31mError: Invalid champion file.\n"
+# define ERR_MSG_09 "\e[31mError: Champion too large for memory space.\n"
 
 /*
 **		Strings:
@@ -134,6 +135,7 @@ typedef struct	s_env
 {
 	char_u		*memory; //malloc to MEM_SIZE
 	int			num_players;
+	int			current_player;
 	t_player	players[MAX_PLAYERS];
 	t_list		*processes;
 	ul_int		cycle;
@@ -176,6 +178,10 @@ void			init_env(t_env *env);
 **		init_functions.c
 */
 void			init_functions(t_env *env);
+/*
+**		load_arena.c
+*/
+void			load_arena(t_env *env, int p_num);
 /*
 **		manage_args.c
 */

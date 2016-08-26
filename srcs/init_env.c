@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 13:53:22 by khansman          #+#    #+#             */
-/*   Updated: 2016/08/26 07:54:32 by arnovan-         ###   ########.fr       */
+/*   Updated: 2016/08/26 10:36:21 by arnovan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	init_env(t_env *env)
 	ft_bzero(env->memory, (MEM_SIZE));
 //	init_player_struct(env, 0);
 	env->num_players = 0;
+	env->current_player = 0;
 	env->cycle = 0;
 	env->cycles_to_die = CYCLE_TO_DIE;
 	env->dump_cycle = LONG_MAX;

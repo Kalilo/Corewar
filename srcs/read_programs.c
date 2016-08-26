@@ -6,13 +6,15 @@
 /*   By: arnovan- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 10:09:11 by arnovan-          #+#    #+#             */
-/*   Updated: 2016/08/26 07:53:11 by arnovan-         ###   ########.fr       */
+/*   Updated: 2016/08/26 10:39:01 by arnovan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-/*
+/*	Reverse byte function incase we need it later
+**  ---------------------------------------------
+**
 **	static char_u	reverse_bytes(unsigned char bytes)
 **	{
 **		char_u rev;
@@ -72,6 +74,8 @@ static void		read_size(t_env *env, int p_num)
 			result = (result << 8) + buffer[x];
 			x++;
 		}
+		if (result > CHAMP_MAX_SIZE)
+			error_quit(9);
 		env->players[p_num].player_ref.prog_size = result;
 	}
 }
@@ -95,19 +99,36 @@ static void		read_comment(t_env *env, int p_num)
 
 void		read_programs(t_env *env)
 {
-	int				p_num;
+//	int				p_num;
 
-	p_num = 0;
-	while (p_num <= (env->num_players - 1))
+//	p_num = env->current_player;
+	while (env->current_player <= (env->num_players - 1))
 	{
-		if ((env->fd = open(env->players[p_num].file_name, O_RDONLY)) == -1)
+		if ((env->fd = open(env->players[env->current_player].file_name, O_RDONLY)) == -1)
 			error_quit(7);
-		make_magic(env, p_num);
-		read_name(env, p_num);
-		read_size(env, p_num);
-		read_comment(env, p_num);
+		make_magic(env, env->current_player);
+		read_name(env, env->current_player);
+		read_size(env, env->current_player);
+		read_comment(env, env->current_player);
+		load_arena(env, env->current_player);
 		close(env->fd);
-		p_num++;
+		env->current_player++;
 	}
-	close(env->fd);
+
+	//////////////////////////////////////////////////////////
+
+	ul_int x;
+	x = 0;
+	while (x < MEM_SIZE)
+	{
+		printf("%x", env->memory[x]);
+		if (x % 100 == 0)
+			printf("\n");
+		x++;
+	}
+	printf("\n");
+
+
 }
+
+
