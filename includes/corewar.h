@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/21 09:45:12 by khansman          #+#    #+#             */
-/*   Updated: 2016/08/26 10:38:28 by arnovan-         ###   ########.fr       */
+/*   Updated: 2016/08/27 09:49:22 by arnovan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@
 # define ERR_MSG_07 "\e[31mError: Unable to open champion file.\n"
 # define ERR_MSG_08 "\e[31mError: Invalid champion file.\n"
 # define ERR_MSG_09 "\e[31mError: Champion too large for memory space.\n"
+# define ERR_MSG_10 "\e[31mError: Program size mismatch.\n"
 
 /*
 **		Strings:
@@ -135,7 +136,6 @@ typedef struct	s_env
 {
 	char_u		*memory; //malloc to MEM_SIZE
 	int			num_players;
-	int			current_player;
 	t_player	players[MAX_PLAYERS];
 	t_list		*processes;
 	ul_int		cycle;
