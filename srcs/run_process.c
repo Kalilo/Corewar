@@ -6,7 +6,7 @@
 /*   By: rojones <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 11:48:58 by rojones           #+#    #+#             */
-/*   Updated: 2016/08/24 12:22:02 by rojones          ###   ########.fr       */
+/*   Updated: 2016/08/29 10:59:15 by arnovan-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	run_process(t_env *env, t_process *pro)
 
 	init_arg_len(&arg_len);
 	opcode = env->memory[pro->pc];
+	printf("\n\nopppppcode: %x\n", opcode);
 	pro->pi = pro->pc;
 	if (opcode > 0 && opcode < 17 && (opcode != 1 || opcode != 9 || opcode != 12
 				|| opcode != 14 || opcode != 16))
