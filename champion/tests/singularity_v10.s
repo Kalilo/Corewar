@@ -151,7 +151,7 @@ p3:
 	st		r14, 6
 	live	%0
 	ld		%34, r3
-	ld		%192152576, r4 ; sti (0b 74 04 00)
+	ld		%191104000, r4 ; sti (0b 64 04 00)
 	ld		%0, r15
 	zjmp	%:start_bot
 
@@ -159,7 +159,7 @@ p4:
 	st		r14, 6
 	live	%0
 	ld		%38, r3
-	ld		%196608, r4 ; sti (00 03 00 00)
+	ld		%167968768, r4 ; sti (0a 03 00 00)
 	ld		%0, r15
 	zjmp	%:start_bot
 
