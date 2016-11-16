@@ -47,14 +47,11 @@ copy_cat:
 	live	%0
 	fork	%:master
 	st		r2, 6
-	st		r2, 6
 	live	%0
 	fork	%:master
 	st		r2, 6
-	st		r2, 6
 	live	%0
 	fork	%:master
-	st		r2, 6
 	st		r2, 6
 	live	%0
 	fork	%:start
