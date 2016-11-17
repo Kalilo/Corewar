@@ -164,7 +164,7 @@ p4:
 	zjmp	%:start_bot
 
 start_bot:
-	st		r1, 6
+	st		r14, 6
 the_bot:
 	live	%0
 	sti		r4, 0, r3
