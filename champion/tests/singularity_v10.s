@@ -129,7 +129,7 @@ f1:
 p1:
 	st		r14, 6
 	live	%0
-	ld		%29, r3
+	ld		%6, r3
 	ld		%16777216, r4 ; live (01 00 00 00)
 	ld		%0, r15
 	zjmp	%:start_bot
@@ -137,7 +137,7 @@ p1:
 p2:
 	st		r14, 6
 	live	%0
-	ld		%30, r3
+	ld		%7, r3
 	ld		%1, r4 ; hardcoded p1
 	ld		%0, r15
 	zjmp	%:start_bot
@@ -150,7 +150,7 @@ f2:
 p3:
 	st		r14, 6
 	live	%0
-	ld		%34, r3
+	ld		%11, r3
 	ld		%191104000, r4 ; sti (0b 64 04 00)
 	ld		%0, r15
 	zjmp	%:start_bot
@@ -158,8 +158,8 @@ p3:
 p4:
 	st		r14, 6
 	live	%0
-	ld		%38, r3
-	ld		%1677918208, r4 ; sti (32 03 00 00)
+	ld		%15, r3
+	ld		%196608, r4 ; sti (00 03 00 00)
 	ld		%0, r15
 	zjmp	%:start_bot
 
@@ -167,7 +167,7 @@ start_bot:
 	st		r14, 6
 the_bot:
 	live	%0
-	sti		r4, 0, r3
+	sti		r4, %0, r3
 #	zjmp	%-50
 
 end:
