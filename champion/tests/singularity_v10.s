@@ -39,6 +39,8 @@ fork_bomb:
 	zjmp	%:fork_bomb
 
 be_alive:
+	st		r14, 6
+	live	%0
 	sti		r14,%:so_alive,%1
 	sti		r14,%:so_alive,%6
 	sti		r14,%:so_alive,%11
@@ -85,6 +87,8 @@ leak:
 	zjmp	%:leak
 
 be_alive2:
+	st		r14, 6
+	live	%0
 	sti		r14,%:so_alive2,%1
 	sti		r14,%:so_alive2,%6
 	sti		r14,%:so_alive2,%11
