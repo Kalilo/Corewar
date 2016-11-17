@@ -10,6 +10,8 @@ pre:
 start:
 	st		r14, 6
 	live	%0
+	ld		%151122944, r2 ; zjmp def (09 01 f4 00)
+	sti		r2, %:pre, %0
 	fork	%:init_bot
 	st		r14, 6
 	live	%0

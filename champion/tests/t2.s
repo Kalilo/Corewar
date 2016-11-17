@@ -3,4 +3,6 @@
 .name       "test2"
 .comment    "testing features"
 
-	zjmp	%200
+pre:
+	ld		%151122944, r2
+	sti		r2, %:pre, %0
