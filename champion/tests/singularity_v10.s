@@ -46,15 +46,15 @@ be_alive:
 	sti		r14,%:so_alive,%1
 	sti		r14,%:so_alive,%6
 	sti		r14,%:so_alive,%11
-	sti 	r14,%:so_alive,%16
-	sti 	r14,%:so_alive,%21
-	sti 	r14,%:so_alive,%26
-	sti 	r14,%:so_alive,%31
-	sti 	r14,%:so_alive,%36
-	sti 	r14,%:so_alive,%41
-	sti 	r14,%:so_alive,%46
-	sti 	r14,%:so_alive,%51
-	sti 	r14,%:so_alive,%63
+	sti		r14,%:so_alive,%16
+	sti		r14,%:so_alive,%21
+	sti		r14,%:so_alive,%26
+	sti		r14,%:so_alive,%31
+	sti		r14,%:so_alive,%36
+	sti		r14,%:so_alive,%41
+	sti		r14,%:so_alive,%46
+	sti		r14,%:so_alive,%51
+	sti		r14,%:so_alive,%63
 
 so_alive:
 	live	%1
@@ -94,15 +94,15 @@ be_alive2:
 	sti		r14,%:so_alive2,%1
 	sti		r14,%:so_alive2,%6
 	sti		r14,%:so_alive2,%11
-	sti 	r14,%:so_alive2,%16
-	sti 	r14,%:so_alive2,%21
-	sti 	r14,%:so_alive2,%26
-	sti 	r14,%:so_alive2,%31
-	sti 	r14,%:so_alive2,%36
-	sti 	r14,%:so_alive2,%41
-	sti 	r14,%:so_alive2,%46
-	sti 	r14,%:so_alive2,%51
-	sti 	r14,%:so_alive2,%63
+	sti		r14,%:so_alive2,%16
+	sti		r14,%:so_alive2,%21
+	sti		r14,%:so_alive2,%26
+	sti		r14,%:so_alive2,%31
+	sti		r14,%:so_alive2,%36
+	sti		r14,%:so_alive2,%41
+	sti		r14,%:so_alive2,%46
+	sti		r14,%:so_alive2,%51
+	sti		r14,%:so_alive2,%63
 	
 so_alive2:
 	live	%1
