@@ -112,7 +112,7 @@ so_alive2:
 	live 	%1
 	ld 		%0,r6
 	live 	%1
-	zjmp 	%:so_alive
+	zjmp 	%:so_alive2
 
 init_bot:
 	sti		r14, %:p2, %19
